@@ -57,53 +57,100 @@ function Issue_certificate() {
   }
   
   return (
-    <div>
-      
-    <input type='button' value="Connect to MetaMask" onClick={handleWallet}/>
-    <br></br><br></br> <br></br><br></br>
-    <form onSubmit={handleSubmit}>
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
 
+    <input
+      type="button"
+      value="Connect to MetaMask"
+      onClick={handleWallet}
+      className="mb-6 px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg shadow hover:bg-yellow-500 transition"
+    />
+  
+    <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md space-y-5">
+      <h2 className="text-2xl font-bold text-center text-gray-800">Certificate Form</h2>
+  
       <div>
-        <label>ID : </label>
-        <input type='text' name='ID' onChange={handleChange}></input>
+        <label className="block text-gray-700 font-medium mb-1">ID:</label>
+        <input
+          type="text"
+          name="ID"
+          onChange={handleChange}
+          className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
       </div>
-
+  
       <div>
-        <label>Name : </label>
-        <input type='text' name='Name' onChange={handleChange}></input>
+        <label className="block text-gray-700 font-medium mb-1">Name:</label>
+        <input
+          type="text"
+          name="Name"
+          onChange={handleChange}
+          className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
       </div>
-
+  
       <div>
-        <label>Course : </label>
-        <input type='text' name='Course' onChange={handleChange}></input>
+        <label className="block text-gray-700 font-medium mb-1">Course:</label>
+        <input
+          type="text"
+          name="Course"
+          onChange={handleChange}
+          className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
       </div>
-
+  
       <div>
-        <label>Grade : </label>
-        <input type='text' name='Grade' onChange={handleChange}></input>
+        <label className="block text-gray-700 font-medium mb-1">Grade:</label>
+        <input
+          type="text"
+          name="Grade"
+          onChange={handleChange}
+          className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
       </div>
-
+  
       <div>
-        <label>Date : </label>
-        <input type='date' name='Date' onChange={handleChange}></input>
+        <label className="block text-gray-700 font-medium mb-1">Date:</label>
+        <input
+          type="date"
+          name="Date"
+          onChange={handleChange}
+          className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
       </div>
-
+  
       <div>
-        <input type='submit' value="Submit" ></input>
+        <input
+          type="submit"
+          value="Submit"
+          className="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg shadow hover:bg-blue-600 transition"
+        />
       </div>
-
     </form>
-
-    <br></br><br></br> <br></br><br></br>
-    <div>
-      <input type='text' id='iD'></input>
-      <input type='button' value="Get Certificate" onClick={hadndleClick}></input>
+  
+    <div className="mt-10 flex flex-col items-center space-y-4">
+      <div className="flex space-x-2">
+        <input
+          type="text"
+          id="iD"
+          placeholder="Enter Certificate ID"
+          className="border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+        <input
+          type="button"
+          value="Get Certificate"
+          onClick={hadndleClick}
+          className="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 transition"
+        />
+      </div>
+  
+      <div className="text-center text-lg font-medium text-gray-800 mt-4">
+        <p>{output}</p>
+      </div>
     </div>
-    <div>
-      <p> {output}</p>
-    </div>
-
+  
   </div>
+  
   )
 }
 
