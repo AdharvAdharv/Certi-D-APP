@@ -35,11 +35,11 @@ CertiChain is a decentralized application (DApp) for securely issuing and verify
 
 ### Certificate Issuance Form
 
-![Certificate Form](./Screenshots/Get-Certificate.png)
+![Certificate Form](./Screenshots/Issue-Certificate.png)
 
 ### Fetch Certificate Section
 
-![Fetch Certificate](./Screenshots/Issue-Certificate.png)
+![Fetch Certificate](./Screenshots/Get-Certificate.png)
 ---
 
 ## ⚙️ Getting Started
